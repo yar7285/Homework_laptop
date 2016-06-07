@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="lab2.css">
+    <style>
+        .parent{
+            width: 800px;
+            height: 500px;
+            border: 1px solid black;
+        }
+        .child {
+           width: 200px;
+           height: 200px;
+           border: 1px solid red;
+           background-color: green; 
+           display: inline-block;
+           margin-left: 100px;
+        }
+        .subchild {
+            width: 100px;
+            height: 100px;
+            border: 1px solid violet;
+            background-color: blue;
+            margin-left: 50px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+      <!--<h1>Hello word</h1>
+      <a href="http://google.com">Google</a>-->
+      <div class="parent">
+          <div class="child child1">
+              <div class="subchild"></div>
+          </div>
+          <div class="child child2"></div>
+      </div>
+      <!--<script>
+          document.getElementsByTagName('a')[0].onclick = function(e){
+              e.preventDefault();
+              alert('click on page');
+              return false;
+          };
+      </script>-->
+      <script>
+          var hendler = function(e) {
+              console.log('event type:' + e.type)
+              console.log('x:' + e.clientX + "; y: " + e.clientY);
+              console.log('target:' + e.target.className);
+              console.log('current target:' + e.currentTarget.className);
+          };
+        //   document.getElementsByClassName('parent')[0].onclick = hendler;
+          document.getElementsByClassName('parent')[0].onmouseover = hendler;
+            document.getElementsByClassName('parent')[0].onmouseout = hendler;
+            document.getElementsByClassName('parent')[0].onmouseenter = hendler;
+            document.getElementsByClassName('parent')[0].onmouseleave = hendler;
+          
+          
+        //   document.getElementsByClassName('child')[0].onclick = hendler;
+           document.getElementsByClassName('child')[0].onmouseover = hendler;
+            document.getElementsByClassName('child')[0].onmouseout = hendler;
+            document.getElementsByClassName('child')[0].onmouseenter = hendler;
+            document.getElementsByClassName('child')[0].onmouseleave = hendler;
+           
+           
+          document.getElementsByClassName('subchild')[0].onclick = hendler;
+      </script>
+    <!--<script src = "lab2.js"></script>-->
+</body>
+</html>

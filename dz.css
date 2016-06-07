@@ -1,0 +1,28 @@
+.in{
+    height: 200px;
+    width: 800px;
+    margin: auto;
+}
+.y {
+    width: 30px;
+}
+.f {
+    height: 300px;
+    width: 700px;
+    margin: auto;
+/*    border: 1px solid black;*/
+}
+.get {
+    display: inline-block;
+    width: 70px;
+    height: 20px;
+    background-color: green;
+/*    margin: left;*/
+}
+.getnew {
+    display: inline-block;
+    width: 70px;
+    height: 20px;
+    background-color: red;
+/*    margin: left;*/
+}
