@@ -1,19 +1,23 @@
-var btn1 = document.querySelector('.one');
- function obj() {
+document.querySelector('.one').addEventListener('click', obj);
+document.querySelector('.two').addEventListener('click', newopen);
+document.querySelector('.three').addEventListener('click', property);
+document.querySelector('.four').addEventListener('click', resizeto);
+document.querySelector('.five').addEventListener('click', resizeby);
+document.querySelector('.six').addEventListener('click', scrolby);
+document.querySelector('.seven').addEventListener('click', scrolto);
+document.querySelector('.eight').addEventListener('click', focus_new);
+document.querySelector('.nine').addEventListener('click', print);
+
+function obj() {
      for(var key  in window){
          console.log(window[key])
      }
  }
- btn1.addEventListener('click', obj);
 
-var btn2 = document.querySelector('.two');
  function newopen() {
-//window.open("https://www.google.com.ua/webhp?hl=uk","new page")
- window.open("file:///C:/Users/Yaroslav/Desktop/for%20Julia/propery.html","new page")
+ window.open("https://developer.mozilla.org/en-US/docs/Web/Demos_of_open_web_technologies","new page")
  }
- btn2.addEventListener('click', newopen);
 
-var btn3 = document.querySelector('.three');
  function property() {
      var el = newopen();
      for(var key  in el){
@@ -21,50 +25,45 @@ var btn3 = document.querySelector('.three');
  }
      }
 
- btn3.addEventListener('mousedown', property, false);
-
-var btn4 = document.querySelector('.four');
  function resizeto() {
      var k = window.open("https://www.google.com.ua/webhp?hl=uk","new page",'height=500,width=500');
      k.window.resizeTo(500,500);
  }
- btn4.addEventListener('mousedown', resizeto, false);
 
-
-var btn5 = document.querySelector('.five');
  function resizeby() {
      var k = window.open("https://www.google.com.ua/webhp?hl=uk","new page",'height=500,width=500');
-     k.focus(0,0);
-     k.resizeBy(-100,-100);
+     k.resizeBy(250,250);
+     k.focus();
  }
- btn5.addEventListener('mousedown', resizeby, false);
 
-var btn6 = document.querySelector('.six');
  function scrolby() {
-     var k = window.open("https://learn.javascript.ru/document","new page")//,"height=300,width=600");
-     window.scrollBy(0,100);
+     var k = window.open("https://www.google.com.ua/webhp?hl=uk");
+     k.window.scrollBy(100,0)
  }
- btn6.addEventListener('click', scrolby);
 
 
-document.querySelector('.seven').addEventListener('click', scrolto);
 function scrolto () {
     window.scrollTo(200,250);
 }
-document.querySelector('.eight').addEventListener('click', focus_new);
+
 function focus_new(){
-    var k = window.open("https://www.google.com.ua/", "google")//, "height = 500px,width=500px");
+    var k = window.open("", "", "height = 500px,width=500px");
+     k.document.write("<p>A new window!</p>");
     k.focus();
     setTimeout(function(){
         k.blur();
     },3000);
 }
 
-
-document.querySelector('.nine').addEventListener('click', print);
 function print() {
-    var newWin = window.open("https://www.google.com.ua/", "google", "height = 500px,width=500px");
-    setTimeout(function(){newWin = window.close()}, 3000);
+    var newWin = window.open("", "google");
+     newWin.document.write("<p>This is 'myWindow'</p>");
+    setTimeout(function(){
+        newWin.close();
+                         }, 4000);
+        newWin.print();
+
+
 
     newWin.focus();
 }
