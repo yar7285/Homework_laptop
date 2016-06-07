@@ -16,7 +16,7 @@ function A() {
 	B();
 };
 
-var C;
+//var C;
 
 function G() {
 	console.log("G");
@@ -28,7 +28,7 @@ function G() {
 	};
 }
 
-var D = d;
+//var D = d;
 
 function d() {
 	console.log("D");
@@ -52,30 +52,31 @@ function F() {
 };
 
 
- var rest = "KLMNOPQRSTUVWXYZ".split("");
-      
-for (var i=0; i<rest.length; i++) {
+
           function K(){
+ var rest = "KLMNOPQRSTUVWXYZ".split("");
+for (var i=0; i<rest.length; i++) {
 		// define the current function
-		window[rest[i]] = function () {
+		window[rest[i]] = (function () {
 			console.log(rest[i]);
 			if (i < (rest.length-1)) {
 				// TODO: call the next function
 			}
-		};
-	};
+		})();
 }
+	};
 
 function J() {
     
 	J = function() {
 		console.log("J");
-            return K();
+            K();
 	};
     
 };
-var C = function () {
+//var C =
+    function C() {
 	console.log("C");
-	D();
+	d();
 };
 
