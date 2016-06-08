@@ -61,6 +61,7 @@ for (var i=0; i<rest.length; i++) {
 			console.log(rest[i]);
 			if (i < (rest.length-1)) {
 				// TODO: call the next function
+                return;
 			}
 		})();
 }
