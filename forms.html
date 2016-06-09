@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="forms.css">
+    <title>Document</title>
+</head>
+<body>
+   <form action="#" method ="get" class = "contact_form" name="contact_form">
+       <legend class="header">Our Forms</legend>
+       <label for="">Name<input type="text" required value="" placeholder="name" name="name" class="form1 forms"></label>
+       <label for="">Age<input type="number" required value="" placeholder="age" class="forms"></label>
+       <label for="">Tel<input type="tel" required value="" placeholder="tel number" pattern1="^\d+$"/ class="tels forms"></label>
+       <label for="">Email<input type="email" required value="" placeholder="john_doe@example.com" class="forms"></label>
+       <label for="">Datetime<input type="datetime" required value="" placeholder="date time" class="forms"></label>
+       <label for="color">Color<input type="color" required value="" placeholder="color" name="color" class="forms"></label>
+       <label for="">   Quality
+          <select name="quantity" class="forms" required>
+          <option value="1" selected>1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+         </select>
+        </label>
+        <label for="">Comments
+         <textarea name="comments" value="" required placeholder="Comments" class="forms"></textarea>
+        </label>
+       <label for="">Search<input type="search" required value="" placeholder="search" class="forms"></label>
+       <label for="">Time<input type="time" required value="" placeholder="time" class="forms"></label>
+       <label for="">Week<input type="week" required value="" placeholder="week" class="forms"></label>
+       <label for="">Range<input type="range" required value="" placeholder="range" min="1" max="10" class="forms"></label>
+       <label for="">URL<input type="url" required value="" placeholder="http://johndoe.com" pattern="(http|https)://.+" class="forms"></label>
+       <label for="">Button<input type="button" required value="Button" placeholder=""  class="forms"></label>
+       <label for="">Checkbox<input type="checkbox" required value="" placeholder="name" class="forms"></label>
+       <label for="">File<input type="file"  class="forms"></label>
+       <label for="">Image<input type="image" class="forms"></label>
+       <label for="">Password<input type="password" required value="" placeholder="password" class="forms"></label>
+       <label for="">Radio<input type="radio" class="forms"></label>
+       <label for="">Reset<input type="reset" class="forms"></label>
+       <label for="">Local-time<input type="datetime-local" class="forms"></label>
+       <label for="">Submit<input type="submit" class="submit forms"></label>
+   </form>
+    <script src="forms.js"></script>
+</body>
+</html>
