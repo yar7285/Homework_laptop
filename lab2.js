@@ -1,6 +1,11 @@
-function urlArgs() {     // created a new function;
+
+var url = 'https://www.google.com.ua/search?q=dr&oq=dr&aqs=chrome..69i57j0l5.1596j0j4&sourceid=chrome&ie=UTF-8#q=%D0%B2%D0%BA';
+
+function urlArgs(url) {     // created a new function;
+
+    var index = url.indexOf('?');
     var args = {};  // created a new variable:object,empty;
-    var query = document.location.search.substring(1);  // created new variable query, which will be search querystring URL with 1-st index to end;
+    var query = url.substring(index);  // created new variable query, which will be search querystring URL with 1-st index to end;
     var pairs = query.split("&"); // created new variable pairs, which will be record string in the array,and if string has '&',array will share coma;
 
     for(var i = 0;i < pairs.length; i++) { // created new cycle;
@@ -11,5 +16,7 @@ function urlArgs() {     // created a new function;
         value = decodeURIComponent(value); // rewrite value , record in variable decoding element value;
         args[name] = value; // recording in object, property name.
         }
-    return args; // return  object;
+    console.log(url)
+    return console.log (args); // return  object;
 }
+urlArgs(url);
